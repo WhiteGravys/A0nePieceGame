@@ -1,0 +1,33 @@
+   local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
+
+local s = VLib:Window("Windows X Hub", "A 0ne Piece Game", "OP")
+
+local ss = s:Tab("Tab 1")
+
+ss:Label("Select your speed first, 4 is recommended ")
+
+local number;
+
+ss:Slider("Speed",0,7,0,function(Value)
+number = Value
+end)
+
+ss:Toggle("Chest Farm",function(t)
+    if number then
+getgenv().Chest = true
+while Chest do task.wait()
+
+for _,v in pairs(game:GetService("Workspace").Map.Islands:GetDescendants()) do
+   if v:FindFirstChild("ClickDetectorPart") and v:IsA"Model" then
+local Time = number
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = v.ClickDetectorPart.CFrame})
+
+
+tween:Play()
+tween.Completed:Wait(E)
+fireclickdetector(v.ClickDetectorPart:FindFirstChild("ClickDetector"))
+end
+end
+end
+end
+end)
